@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'yaz-okulu-basvuru',
+    loadChildren: () => import('./yaz-okulu-basvuru/yaz-okulu-basvuru.module').then( m => m.YazOkuluBasvuruPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 
