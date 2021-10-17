@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h6>Öğrenci Başvuru Sistemi</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Kayıt Ol</ion-button>
+
+        <span class="divider line one-line">veya </span>
+
+        <span class="already">Kayıtlıysanız</span>
+
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Giriş Yap</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

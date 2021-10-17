@@ -1,0 +1,7 @@
+{
+  "name": "Öğrenci Başvuru Sistemi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
