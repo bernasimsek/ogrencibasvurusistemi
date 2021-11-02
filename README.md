@@ -10,6 +10,6 @@ authenticate to firebase
 
 #NEED
 nodejs
-ionic/angular
+ionic/angular  // npm install -g @ionic/cli
 npm cli
 firebase authentication
