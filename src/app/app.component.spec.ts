@@ -29,7 +29,6 @@ describe('AppComponent', () => {
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-label');
     expect(menuItems.length).toEqual(12);
- 
   }));
 
   it('should have urls', waitForAsync(() => {
@@ -38,7 +37,6 @@ describe('AppComponent', () => {
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-item');
     expect(menuItems.length).toEqual(12);
- 
   }));
 
 });

@@ -117,3 +117,10 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.logoutBtn{
+  --background:#eb445a !important
+}
+.ion-activated{
+  --background-activated: #198645 !important
+}

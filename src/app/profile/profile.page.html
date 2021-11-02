@@ -1,14 +1,47 @@
-<ion-header>
+<!DOCTYPE html>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      <h6>Profil</h6>
-    </ion-title>
+    <ion-title>Profilim</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="auth-form">
-  
+<ion-content>
+  <div class="container">
+    <div class="overylay">
+      <ion-avatar>
+        <ion-img [src]="profileImageUrl"></ion-img>
+        <div class="containerWrap">
+          <ion-button expand="full" *ngIf="!isLoading  && !isLoaded" class="ion-text-center">
+            <ion-icon slot="start" lazy="true" name="image"></ion-icon>
+            <input type="file" (change)="uploadImagetoFirebase($event)" id="file-input" accept="image/png, image/jpg">
+          </ion-button>
+        </div>
+      </ion-avatar>
+      <div>
+      </div>
+    </div>
+  </div>
+  <ion-card style="background-color:rgb(32, 92, 74);margin-top:150px">
+    <ion-card-header>
+      <ion-card-title>
+        {{this.profileName}}{{' '}}{{this.lastname}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-icon name="mail"></ion-icon>
+        <ion-label>{{this.profileEmail}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="call"></ion-icon>
+        <ion-label>{{this.phone}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="locate"></ion-icon>
+        <ion-label>{{this.num}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

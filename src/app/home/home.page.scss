@@ -1,0 +1,108 @@
+ion-content{
+    --ion-background-color:rgb(24, 24, 24);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.error_message{
+    font-size: 15px;
+    font-weight:200;
+    color: #ff6262;
+  }
+
+ 
+.background-filter{
+    height: 100%;
+    width: 100%;
+    background: rgba(39, 39, 39, 0.8);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+ 
+ 
+
+ion-card{
+    margin-top: 130px;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+
+    ion-card-title{
+        color:#ffffff;
+        font-size: 30px;
+    }
+
+    ion-card-subtitle{
+        color:#BBBBBB;
+        font-size: 14px;
+        font-weight: 400; 
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #198645;
+            font-size: 15;
+        }
+    }
+
+    ion-card-content{
+        margin-top: 30px;
+
+        ion-item{
+            --ion-item-background:transparent;
+            --border-width:0;
+            --inner-border-width:0;
+            --highlight-color-focused:none;
+            margin-bottom: 15px;
+
+            ion-input{
+                width:257px;
+                height: 42px;
+                border-radius: 15px;
+                border:  1px solid #198645;
+                font-size: 14px;
+                font-weight: 300;
+                color:#ffffff;
+                --padding-start:30px;
+            }
+
+        }
+
+        a{
+            text-decoration: none;
+            color:#589B3F;
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+  
+    .bottom-section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ion-button{
+    height: 53px;
+    width: 247px;
+    font-size: 14px;
+    text-transform: none;
+    --background:#198645;
+      font-weight: 400;
+    --border-radius: 15px !important;
+      color:#fff;
+    }
+    
+    .ion-activated{
+        --background-activated: #eb445a !important
+    }
+    
+    span{
+        margin-top: 10px;
+        font-weight: 330;
+        a{
+            font-weight: 400;
+        }
+    }
+    }
+
+}

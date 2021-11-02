@@ -1,26 +1,47 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>
-      <h6>Öğrenci Başvuru Sistemi</h6>
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
-
-<ion-content class="auth-form">
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Kayıt Ol</ion-button>
-
-        <span class="divider line one-line">veya </span>
-
-        <span class="already">Kayıtlıysanız</span>
-
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Giriş Yap</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content>
+  <div class="background-pic">
+     <div class="background-filter">
+       <ion-card>
+         <ion-card-header>
+           <ion-card-title>
+            Hoşgeldiniz !
+           </ion-card-title>
+           <ion-card-subtitle>
+           BAŞVURU YAPMAK İÇİN <a href="#" >Giriş Yap</a>
+           </ion-card-subtitle>
+         </ion-card-header>
+         <ion-card-content>
+          <form [formGroup] ="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)"> 
+            <ion-item>
+             <ion-input type="email" placeholder="E-posta" formControlName="email"></ion-input>
+            </ion-item>
+            <div style="color:rgb(255, 66, 66);">
+              <ng-container *ngFor="let validation of validationUserMessage.email">
+                <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                   {{validation.message}}
+                </div>
+              </ng-container>
+            </div>
+            <ion-item>
+              <ion-input type="password" formControlName="password" placeholder="Şifre"></ion-input>
+            </ion-item>
+            <div>
+              <ng-container *ngFor="let validation of validationUserMessage.password">
+                   <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                      {{validation.message}}
+                   </div>
+               </ng-container>
+          </div>
+            <a href="#">Şifremi Unuttum</a>
+            <div class="bottom-section">
+              <ion-button type="submit" [disabled]="!validationFormUser.valid">Giriş Yap</ion-button>
+              <span> Kayıtlı değil misiniz? <a href="/registration"> Kayıt Ol</a></span>
+            </div>
+          </form>
+         </ion-card-content>
+       </ion-card>
+     </div>
+  </div>
 </ion-content>

@@ -1,74 +1,83 @@
 <ion-header>
   <ion-toolbar>
-    
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
     <ion-title>Kayıt</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <form>
+  <form  >
     <ion-list>
       
     <ion-item lines="full">
       <ion-label position="floating">Ad</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
     </ion-item>
-
+    
     <ion-item lines="full">
       <ion-label position="floating">Soyad</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text"  [(ngModel)]="lastname" name="lastname"></ion-input>
     </ion-item>
-
+    <ion-item lines="full">
+      <ion-label position="floating">E-posta</ion-label>
+      <ion-input type="text"  [(ngModel)]="email"  name="email" required></ion-input>
+    </ion-item>
+    
     <ion-item lines="full">
       <ion-label position="floating">Telefon</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="phone"name="phone" ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">T.C.</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="ID" name="ID"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Öğrenci No.</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="num" name="num"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Sınıf</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="class" name="class"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Üniversite</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="university" name="university"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Doğum Tarihi</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="birthDate" name="birthDate"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Fakülte</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="faculty" name="faculty"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Bölüm</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="section" name="section"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Adres</ion-label>
+      <ion-input type="text" [(ngModel)]="address" name="address"></ion-input>
     </ion-item>
  
     <ion-item lines="full">
       <ion-label position="floating">Şifre</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
     </ion-item>
-
+    
      
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="danger" expand="block">Kayıt Ol</ion-button>
+          <ion-button color="danger" expand="block"
+          type="submit" (click)="register()" 
+          >Kayıt Ol</ion-button>
            <ion-row><ion-item></ion-item></ion-row>
         </ion-col>
       </ion-row>
