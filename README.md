@@ -1,11 +1,15 @@
 # ogrencibasvurusistemi
 Öğrenci Başvuru Sistemi mobil uygulaması
 
-# TO RUN
-cd ogrenci-basvuru-sistemi
-ionic serve
+#TO RUN
 
-# TO RUN ON LAB 
-cd ogrenci-basvuru-sistemi
-ionic serve --lab
+git clone repo
+authenticate to firebase
+--ionic serve 
 
+
+#NEED
+nodejs
+ionic/angular
+npm cli
+firebase authentication
