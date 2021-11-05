@@ -41,14 +41,13 @@ export interface Fakulteler {
   styleUrls: ['./yaz-okulu-basvuru.page.scss'],
 })
 export class YazOkuluBasvuruPage implements OnInit {
-  //akulteler$: Observable<Fakulteler[]>;
+   
   fakulteler: Observable<Fakulteler[]>;
   fakulteAd:any;
   bolumAd:any;
   ad:any;
   soyad:any;
   no:any;
-
   fakulteCollection: AngularFirestoreCollection<Fakulteler>;
   constructor(public loadingCtrl: LoadingController, private alertCtrl: AlertController,public afAuth: AngularFireAuth, private database: AngularFirestore, private authservice: AuthService, private storage: AngularFireStorage,
     private router: Router) {
@@ -56,19 +55,11 @@ export class YazOkuluBasvuruPage implements OnInit {
     this.afAuth.signInAnonymously();
     this.fakulteCollection = this.database.collection('fakulteler'); 
     this.fakulteler = this.fakulteCollection.valueChanges();
- 
-      /*this.fakulteler$ = this.database.collection<Fakulteler>('fakulteler')
-      .snapshotChanges().pipe(
-        map(actions => actions.map(a => {
-          const data = a.payload.doc.data() as Fakulteler;
-          const id = a.payload.doc.id;
-          return {...data};
-        }))
-      );*/
+  
    }
   
   ngOnInit() {
-    //this.fakulteler$.subscribe(data => console.log(Array.from(data.values())[0]));
+     
   }
    add(){
     this.showalert();

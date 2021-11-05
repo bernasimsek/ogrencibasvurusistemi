@@ -8,5 +8,42 @@
 </ion-header>
 
 <ion-content>
-
+  
+  <form>
+   
+    <ion-list>
+     
+      <ion-item>
+      <ion-label position="floating">Ad</ion-label>
+      <ion-input type="text" required [(ngModel)]="ad" name="ad"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Soyad</ion-label>
+      <ion-input type="text" required [(ngModel)]="soyad" name="soyad"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Öğrenci Numarası</ion-label>
+      <ion-input type="text"required  [(ngModel)]="no" name="no"></ion-input>
+    </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Fakülte</ion-label>
+        <ion-input type="text"required  [(ngModel)]="fakulteAd" name="fakulteAd"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Bölüm Adı</ion-label>
+        <ion-input type="text"required  [(ngModel)]="bolumAd" name="bolumAd"></ion-input>
+      </ion-item>
+       
+      
+      <ion-row>
+        <ion-col>
+          <ion-button color="danger" expand="block"
+          type="submit" (click)="add()"
+          >Başvur</ion-button>
+           <ion-row><ion-item></ion-item></ion-row>
+        </ion-col>
+      </ion-row>
+   
+    </ion-list>
+  </form>
 </ion-content>
